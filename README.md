@@ -38,10 +38,14 @@ Client-side form validation
 
 Mock API integration
 
-## Important Notes
+## Potential Improvements
 
-Uses JSONPlaceholder mock API (does not persist actual changes)
+Backend Integration
 
-Locally added users will disappear on refresh
+    Connect to real database
+    Implement proper authentication
 
-API operations are simulated for demonstration purposes
+UI Enhancements
+
+    Dark mode support
+    Detailed user profiles
