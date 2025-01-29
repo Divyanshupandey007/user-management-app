@@ -1,0 +1,131 @@
+.user-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.user-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+}
+
+.user-form input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.user-form input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.submit-btn {
+    background-color: var(--success-color);
+    color: white;
+    flex: 1;
+}
+
+.cancel-btn {
+    background-color: var(--danger-color);
+    color: white;
+    flex: 1;
+}
+
+.submit-btn:hover,
+.cancel-btn:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+    .user-form {
+        width: 95%;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+}
+
+.user-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    width: 90%;
+    max-width: 500px;
+    background: white;
+    border-radius: 16px;
+    z-index: 1000;
+    opacity: 0;
+    animation: modalEnter 0.3s ease forwards;
+  }
+  
+  @keyframes modalEnter {
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+  .user-form form {
+    padding: 2rem;
+  }
+  
+  .user-form input {
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .user-form input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .submit-btn {
+    background: var(--success-color);
+    font-weight: 600;
+  }
+  
+  .cancel-btn {
+    background: var(--danger-color);
+    font-weight: 600;
+  }
+  
+  /* Added blurring effect to the background */
+  .form-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+  }
