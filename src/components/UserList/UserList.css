@@ -1,0 +1,76 @@
+.user-list {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.loading {
+    padding: 20px;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.error {
+    padding: 20px;
+    text-align: center;
+    color: var(--danger-color);
+    font-size: 1.2rem;
+}
+
+.user-list table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.user-list th {
+    background-color: var(--primary-color);
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.user-list tr:hover {
+    background-color: var(--light-color);
+}
+
+@media (max-width: 768px) {
+    .user-list {
+        margin: 10px;
+        padding: 10px;
+    }
+    
+    .user-list th,
+    .user-list td {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+    
+    .edit-btn,
+    .delete-btn {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+/* extra styling for better UX*/
+.user-list tr {
+    transition: all 0.2s ease;
+  }
+  
+  .user-list tr:hover {
+    transform: translateX(4px);
+    background: var(--light-color);
+  }
+
+  Add this to ensure table rows maintain proper spacing
+.user-list tbody tr {
+    transition: all 0.3s ease;
+  }
+  
+  .user-list tbody tr:hover {
+    background-color: rgba(79, 70, 229, 0.05);
+  }
